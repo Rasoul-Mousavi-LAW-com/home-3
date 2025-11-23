@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="رسول موسوی - وکیل پایه یک دادگستری و متخصص دعاوی رمزارز، قاچاق کالا و ارز. ارائه خدمات مشاوره حقوقی تخصصی">
+    <meta name="keywords" content="وکیل, دعاوی رمزارز, قاچاق کالا, وکیل اقتصادی, مشاوره حقوقی, وکیل پایه یک">
+    <title>رسول موسوی - وکیل پایه یک دادگستری | متخصص دعاوی رمزارز و قاچاق کالا و ارز</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #d4af37;
+            --accent-color: #e53e3e;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-text);
+            line-height: 1.8;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            padding-top: 80px; /* Add padding to body to prevent content from hiding behind fixed navbar */
+        }
+
+        /* هدر و ناوبری */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            position: fixed; /* Changed from sticky to fixed for consistent behavior */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030; /* Ensure navbar stays above other content */
+            width: 100%;
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0; /* Keep padding adjustment but remove any position changes */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--primary-color) !important;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+            margin-left: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+            padding: 3px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-link {
+            color: var(--dark-text) !important;
+            font-weight: 600;
+            margin-left: 2rem;
+            transition: color 0.3s ease;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+
+        .nav-link.active:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        /* هیرو سکشن */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2d3748 100%);
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: -80px; /* Compensate for body padding */
+        }
+
+        .hero-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .hero-section .lead {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--secondary-color);
+            margin: 0 auto 2.5rem;
+            display: block;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .credential-badge {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* بخش‌های اصلی */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            color: var(--primary-color);
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 18px;
+            font-size: 2.2rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .specialty-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            height: 100%;
+            border-top: 5px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .specialty-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            background: var(--primary-color);
+            opacity: 0.05;
+            transition: height 0.4s ease;
+        }
+
+        .specialty-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .specialty-card:hover:before {
+            height: 100%;
+        }
+
+        .specialty-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.8rem;
+            position: relative;
+        }
+
+        /* درباره من */
+        .about-section {
+            background-color: var(--light-bg);
+            padding: 6rem 0;
+        }
+
+        .qualification-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .qualification-list li {
+            margin-bottom: 1.2rem;
+            padding-right: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .qualification-list li:before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .features-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2d3748 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* خدمات */
+        .services-section {
+            padding: 6rem 0;
+        }
+
+        /* تماس */
+        .contact-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000000" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 0.9rem 2.5rem;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(229, 62, 62, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #c53030;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(229, 62, 62, 0.4);
+        }
+
+        .btn-light {
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            padding: 0.9rem 2.5rem;
+            font-weight: 700;
+        }
+
+        .btn-light:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* فرم تماس */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.9rem 1.2rem;
+            margin-bottom: 1.2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            background: white;
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.3);
+            border-color: var(--secondary-color);
+        }
+
+        /* شبکه‌های اجتماعی */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            margin: 0 0.7rem;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* دکمه بازگشت به بالا */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            font-size: 1.2rem;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #c53030;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* فوتر */
+        .footer {
+            background-color: #1a202c;
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        /* انیمیشن‌ها */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* استایل برای اسکرول نرم */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* بهبود نمایش در موبایل */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px; /* Adjust for smaller navbar on mobile */
+            }
+            
+            .hero-section {
+                padding: 7rem 0 4rem;
+                margin-top: -70px; /* Adjust for smaller navbar on mobile */
+            }
+            
+            .hero-section h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-section .lead {
+                font-size: 1.2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1rem;
+            }
+            
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .nav-link {
+                margin-left: 1rem;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                left: 20px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .credentials {
+                gap: 1rem;
+            }
+            
+            .credential-badge {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.85rem;
+            }
+            
+            .logo {
+                height: 45px;
+                width: 45px;
+            }
+            
+            .specialty-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .feature-item {
+                padding: 1rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ناوبری -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- لوگو با تصویر مورد نظر شما -->
+                <img src="https://img.freepik.com/premium-vector/modern-law-firm-logo-featuring-stylized-scales-justice-surrounded-by-laurel-wreath-develop-clean-modern-logo-that-represents-expertise-legal-guidance_538213-67891.jpg" alt="لوگو رسول موسوی" class="logo">
+                رسول موسوی
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">درباره من</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">حوزه‌های تخصصی</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">تألیفات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">تماس با من</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- هیرو سکشن -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <!-- تصویر پروفایل جایگزین شده با آدرس جدید -->
+            <img src="https://github.com/Rasoul-Mousavi-LAW-com/home-3/blob/main/%2B584%20-%20Copy.jpg?raw=true" alt="رسول موسوی" class="profile-image">
+            <h1 class="fade-in-up">رسول موسوی</h1>
+            <p class="lead fade-in-up">وکیل پایه یک دادگستری | متخصص دعاوی رمزارز و قاچاق کالا و ارز</p>
+            <p class="subtitle fade-in-up">ارائه خدمات حقوقی تخصصی با تمرکز بر روی پرونده‌های پیچیده اقتصادی و بین‌المللی</p>
+            
+            <div class="credentials">
+                <span class="credential-badge fade-in-up">عضو کانون وکلای دادگستری مرکز</span>
+                <span class="credential-badge fade-in-up">دارای پروانه وکالت تخصصی جرائم اقتصادی</span>
+                <span class="credential-badge fade-in-up">متخصص در حقوق رمزارزها</span>
+            </div>
+            
+            <a href="#contact" class="btn btn-primary btn-lg mt-4 fade-in-up">دریافت مشاوره تخصصی</a>
+        </div>
+    </section>
+
+    <!-- درباره من -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">درباره من</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <p class="lead">با سلام و احترام، من <strong>رسول موسوی</strong>، وکیل پایه یک دادگستری و مشاور حقوقی با تخصص در زمینه‌های نوین اقتصادی و بین‌المللی هستم.</p>
+                    <p>با بیش از پنج سال تجربه در زمینه دعاوی پیچیده اقتصادی، خود را متعهد به ارائه بهترین خدمات حقوقی به موکلانم می‌دانم. تمرکز اصلی من بر روی پرونده‌های مرتبط با رمزارزها، قاچاق کالا و ارز، و دیگر جرائم اقتصادی است.</p>
+                    
+                    <h4 class="mt-5 mb-4">مدارک و صلاحیت‌ها</h4>
+                    <ul class="qualification-list">
+                        <li>وکیل پایه یک دادگستری</li>
+                        <li>عضو کانون وکلای دادگستری مرکز</li>
+                        <li>دارای پروانه وکالت تخصصی جرائم اقتصادی از مرکز وکلای قوه قضائیه</li>
+                        <li>متخصص در حقوق رمزارزها و قاچاق کالا و ارز</li>
+                        <li>کارشناس ارشد حقوق تجارت بین‌الملل</li>
+                        <li>نویسنده کتاب "پاسخنامه تشریحی آزمون وکالت"</li>
+                        <li>همکاری با موسسه آموزشی پژوهش</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="specialty-card">
+                        <i class="fas fa-gavel specialty-icon"></i>
+                        <h4>تخصص اصلی</h4>
+                        <p>دعاوی اقتصادی، رمزارزها، قاچاق کالا و ارز</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ویژگی‌های متمایز -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">ویژگی‌های متمایز</h2>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="feature-item">
+                        <i class="fas fa-graduation-cap feature-icon"></i>
+                        <div class="feature-title">تخصص دانشگاهی</div>
+                        <div class="feature-description">کارشناس ارشد حقوق تجارت بین‌الملل</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-item">
+                        <i class="fas fa-book feature-icon"></i>
+                        <div class="feature-title">تألیف و پژوهش</div>
+                        <div class="feature-description">نویسنده کتاب تخصصی حقوقی</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-item">
+                        <i class="fas fa-globe feature-icon"></i>
+                        <div class="feature-title">دیدگاه بین‌المللی</div>
+                        <div class="feature-description">تخصص در پرونده‌های فرامرزی</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-item">
+                        <i class="fas fa-bolt feature-icon"></i>
+                        <div class="feature-title">تکنولوژی محور</div>
+                        <div class="feature-description">تخصص در حقوق فناوری‌های نوین</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- خدمات و تخصص‌ها -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">حوزه‌های تخصصی</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="specialty-card">
+                        <i class="fab fa-bitcoin specialty-icon"></i>
+                        <h4>دعاوی رمزارزها</h4>
+                        <p>مشاوره و دفاع در پرونده‌های مرتبط با ارزهای دیجیتال، کلاهبرداری‌های رمزارزی، استخراج و سرمایه‌گذاری در حوزه بلاکچین، و ارائه راهکارهای حقوقی برای فعالان این حوزه</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="specialty-card">
+                        <i class="fas fa-shipping-fast specialty-icon"></i>
+                        <h4>قاچاق کالا و ارز</h4>
+                        <p>دفاع در پرونده‌های قاچاق کالا و ارز، مشاوره در زمینه مقررات صادرات و واردات، و ارائه راهکارهای حقوقی برای فعالان تجاری و بازرگانی بین‌المللی</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="specialty-card">
+                        <i class="fas fa-balance-scale specialty-icon"></i>
+                        <h4>جرائم اقتصادی</h4>
+                        <p>دفاع در پرونده‌های کلاهبرداری، اختلاس، پولشویی و دیگر جرائم سازمان یافته اقتصادی با استفاده از آخرین تحولات قوانین و رویه‌های قضایی</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تألیفات -->
+    <section id="publications" class="about-section">
+        <div class="container">
+            <h2 class="section-title">تألیفات و همکاری‌ها</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="specialty-card">
+                        <i class="fas fa-book specialty-icon"></i>
+                        <h4>پاسخنامه تشریحی آزمون وکالت</h4>
+                        <p>تألیف کتاب جامع "پاسخنامه تشریحی آزمون وکالت" با هدف کمک به داوطلبان عزیز برای موفقیت در این آزمون سرنوشت‌ساز. این کتاب با استقبال گسترده داوطلبان مواجه شده است.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="specialty-card">
+                        <i class="fas fa-university specialty-icon"></i>
+                        <h4>همکاری با موسسه آموزشی پژوهش</h4>
+                        <p>همکاری مستمر در زمینه آموزش حقوقی و برگزاری دوره‌های تخصصی برای وکلای جوان و دانشجویان حقوق در موسسه معتبر پژوهش</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تماس -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">تماس با من</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <h4>تلفن تماس</h4>
+                        <p>۰۹۱۲۲۳۵۰۹۷۴</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <h4>آدرس دفتر</h4>
+                        <p>تهران، ظفر، خیابان ولیعصر، برج پیروز، طبقه هفت، واحد ۳۴</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- فرم تماس -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h4 class="text-center mb-4">فرم درخواست مشاوره</h4>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="نام و نام خانوادگی" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="شماره تماس" required>
+                                </div>
+                            </div>
+                            <input type="email" class="form-control" placeholder="آدرس ایمیل">
+                            <select class="form-control" required>
+                                <option value="" disabled selected>نوع درخواست</option>
+                                <option value="crypto">دعاوی رمزارز</option>
+                                <option value="smuggling">قاچاق کالا و ارز</option>
+                                <option value="economic">جرائم اقتصادی</option>
+                                <option value="other">سایر</option>
+                            </select>
+                            <textarea class="form-control" rows="4" placeholder="توضیحات مورد نظر" required></textarea>
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-light btn-lg">ارسال درخواست</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- شبکه‌های اجتماعی -->
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p>کلیه حقوق این وب‌سایت محفوظ و متعلق به رسول موسوی می‌باشد. © ۱۴۰۳</p>
+        </div>
+    </footer>
+
+    <!-- دکمه بازگشت به بالا -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // اسکرول نرم برای لینک‌های داخلی
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    window.scrollTo({
+                        top: targetElement.offsetTop - navbarHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // تغییر استایل نوار ناوبری هنگام اسکرول
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const backToTop = document.querySelector('.back-to-top');
+            
+            if(window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // نمایش دکمه بازگشت به بالا
+            if(window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+            
+            // فعال کردن لینک‌های ناوبری بر اساس موقعیت اسکرول
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                
+                if(window.scrollY >= (sectionTop - navbarHeight - 50)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // مدیریت ارسال فرم
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('درخواست شما با موفقیت ارسال شد. در اسرع وقت با شما تماس گرفته خواهد شد.');
+            this.reset();
+        });
+        
+        // انیمیشن برای عناصر هنگام اسکرول
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        // مشاهده عناصری که باید انیمیشن داشته باشند
+        document.querySelectorAll('.specialty-card, .about-section .lead, .about-section p, .qualification-list, .feature-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // اطمینان از بارگذاری فونت
+        document.fonts.ready.then(function() {
+            console.log('فونت‌ها بارگذاری شدند');
+        });
+    </script>
+</body>
+</html>
